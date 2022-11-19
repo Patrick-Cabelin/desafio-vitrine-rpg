@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+
+body{
+    display:flex;
+    flex-direction: row;
+    background:url("https://i.pinimg.com/736x/b9/b3/3a/b9b33a8af9c67c6b94cda91c7444feb9.jpg"),top center, no-repeat, fixed;
+    background-size: contain;
+}
+
+header{
+    width: 37.7rem;
+    height: 72rem;
+    animation: headerAppear.5s .45s backwards;
+
+}
+
+.about{
+    width: 27.5rem;
+
+    width: clamp(22.5rem, 3rem + 1vw, 33.7rem);
+    font-size: clamp(0.5rem, 0.5rem + 2.9vw , 2rem);
+
+    position:absolute;
+    top:31.6rem;
+    left: 2.5rem;
+
+    animation: headerAppear.5s .45s backwards;
+}
+
+main{
+    width: 100%;
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 3.2rem;
+
+
+}
+
+.card:nth-child(5) span {
+    top: 45rem;
+}
+.card:nth-child(5) img {
+    width: 21.6rem;
+    height: 50rem
+}
+
+.card img{
+    width: 21.6rem;
+    height: 24.5rem;
+    
+    border: .2rem solid var(--color-two);
+    border-radius: 4rem;
+}
+
+.grade{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 3.2rem;
+    margin: 6.4rem 8.1rem 5rem 9.8rem;
+    grid-template-areas:
+    "SISTEMA MINIATURA EXTRA"
+    "GRADE ACESSORIO EXTRA "
+    "GRADE ACESSORIO EXTRA"; 
+}
+
+.grade .card:nth-child(1){
+    grid-area: SISTEMA;
+    animation: appearGrowth .7s .55s backwards ;
+    animation-timing-function: cubic-bezier(0.84, 0.81, 0.76, 1.01);
+}
+
+.grade .card:nth-child(2){
+    grid-area: GRADE;
+    animation: appearGrowth .5s .65s backwards;
+    animation-timing-function: cubic-bezier(0.84, 0.81, 0.76, 1.01);
+
+}
+
+.grade .card:nth-child(3){
+    grid-area: ACESSORIO;
+    animation: appearGrowth .7s .55s backwards ;
+    animation-timing-function: cubic-bezier(0.84, 0.81, 0.76, 1.01);
+}
+
+.grade .card:nth-child(4){
+    grid-area: MINIATURA;
+    animation: appearGrowth .5s .65s backwards;
+    animation-timing-function: cubic-bezier(0.84, 0.81, 0.76, 1.01);
+}
+
+.grade .card:nth-child(5){
+    grid-area: EXTRA;
+    animation: appearGrowth .7s .55s backwards ;
+    animation-timing-function: cubic-bezier(0.84, 0.81, 0.76, 1.01);
+    display: block;
+}
+
+
+
+footer{
+    display:block;
+    position: absolute;
+    top: 72rem;
+    left: 65rem;
+
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+    color: var(--color-one);
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #26264e;
+}
+
+footer a:hover{
+    font-size: 1.7rem;
+    color: #37378b;
+    cursor: pointer;
+}
